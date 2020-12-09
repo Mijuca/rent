@@ -5,30 +5,50 @@
         <title></title>
     </head>
     <style type="text/css">
-        div.shadow {
-            position:absolute;
-            max-width:45%;
-            max-height:45%;
-            top:50%;
-            left:50%;
-            overflow:visible;
+          @font-face {
+          font-family: 'Raleway';
+          src: url('assets/font/Raleway-Thin.ttf') format ('ttf');
         }
-        img.centered {
-            position:relative;
-            max-width:100%;
-            max-height:100%;
-            margin-top:-50%;
-            margin-left:-50%;
-            }
+        html,
+        body {
+          margin: 0;
+          height: 100%;
+          overflow: hidden;
+        }
+        body {
+           background-color: #cadce8;
+          background-size: cover;
+          background-position: center;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-repeat: no-repeat;
+          overflow:auto;
+        }
+        .wrapper {
+          width:100%;
+          text-align:center;
+          top:5%;
+          position:relative;
+        }
+        p {
+          font-family: 'Raleway';
+          color: black;
+          text-align: center;
+          font-size: 24px;
+        margin-top: 25px;
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        img.ri {
+          max-width: 40%;
+        }
     </style>
     <body>
-        <div class="shadow">
-           <img class="centered" src="main-image.JPG">
-        </div>
-      <!--   <script>
-        window.onresize = function() {
-            document.getElementById("size").innerHTML = window.innerWidth;
-        };
-        </script> -->
-    </body>
+  <div class="wrapper">
+  <img class="ri" src=main-image.JPG>
+  <p>REAL ESTATE CHOREOGRAPHY</p>
+    </div>
+</body>
 </html>
