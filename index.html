@@ -6,8 +6,36 @@
         <meta charset="utf-8">
         <title>Duje Renting</title>
   <script src="wheelzoom.js"></script>
+  <script type="text/javascript">
+    function disableScrolling(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
+      }
+
+      function enableScrolling(){
+          window.onscroll=function(){};
+      }
+  </script>
 
   <style type="text/css">
+
+  .centered-img {
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
+    overflow-x: hidden;
+    z-index: 100;
+  }
+
     img.svg-img
   {
       position: absolute;
@@ -42,10 +70,13 @@
   }
 </style>
 </head>
-<body style="background-color: #F2AAC3">
-<div style="background-color: #F2AAC3">
+<body id='test' style="background-color: #7081eb" onload="disableScrolling()">
+
+<img src="introjpg-01.jpg" id="hide-me" class='centered-img' onclick="document.getElementById('hide-me').style.visibility='hidden';enableScrolling();document.getElementById('test').style.backgroundColor='#F2AAC3';"/>
+
+<div>
   <img type="image/svg+xml" src="Mapasvg-01.svg" class="svg-img", loading="lazy"/>
-  <script>wheelzoom(document.querySelectorAll('img'));</script>
+  <script>wheelzoom(document.querySelectorAll('.svg-img'));</script>
 </div>
 </body>
 </html>
